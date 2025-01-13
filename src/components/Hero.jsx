@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
   return (
     <div id="home" className="pt-16 bg-navy-900">

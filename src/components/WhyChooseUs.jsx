@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Smartphone, Globe, TrendingUp, ShoppingCart, Pen, Box } from 'lucide-react';
 
