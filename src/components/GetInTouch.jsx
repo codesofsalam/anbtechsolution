@@ -1,4 +1,3 @@
-import React from 'react';
 import { Send } from 'lucide-react';
 
 const GetInTouch = () => {
@@ -10,7 +9,7 @@ const GetInTouch = () => {
             Get in Touch
           </h2>
           <p className="mt-4 text-xl text-gray-300">
-            Let's discuss how we can help transform your business
+            Let&apos;s discuss how we can help transform your business
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto">

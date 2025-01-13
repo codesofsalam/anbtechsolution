@@ -1,5 +1,4 @@
-// src/components/WhyChooseUs.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Smartphone, Globe, TrendingUp, ShoppingCart, Pen, Box } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
@@ -11,6 +10,12 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
     <p className="mt-2 text-gray-300">{description}</p>
   </div>
 );
+
+ServiceCard.propTypes = {
+  icon: PropTypes.elementType.isRequired, // Ensures the icon prop is a valid React component
+  title: PropTypes.string.isRequired,    // Ensures title is a required string
+  description: PropTypes.string.isRequired, // Ensures description is a required string
+};
 
 const WhyChooseUs = () => {
   const services = [

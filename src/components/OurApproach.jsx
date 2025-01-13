@@ -1,5 +1,3 @@
-// src/components/OurApproach.jsx
-import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const OurApproach = () => {
