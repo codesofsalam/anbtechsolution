@@ -1,3 +1,5 @@
+// src/components/Footer.jsx
+import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -14,26 +16,26 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-white">Home</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white">Services</a></li>
-              <li><a href="#approach" className="text-gray-300 hover:text-white">Our Approach</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-blue-300 transition-colors">Home</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-blue-300 transition-colors">Services</a></li>
+              <li><a href="#approach" className="text-gray-300 hover:text-blue-300 transition-colors">Our Approach</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-blue-300 transition-colors">Contact</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white text-lg font-semibold">Connect With Us</h3>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-blue-300 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-blue-300 transition-colors">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-blue-300 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Instagram className="h-6 w-6" />
+              <a href="#" className="text-gray-300 hover:text-blue-300 transition-colors">
+              <Instagram className="h-6 w-6" />
               </a>
             </div>
           </div>

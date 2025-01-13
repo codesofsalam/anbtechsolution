@@ -15,10 +15,10 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#home" className="text-white hover:text-gray-300 px-3 py-2">Home</a>
-              <a href="#services" className="text-white hover:text-gray-300 px-3 py-2">Services</a>
-              <a href="#approach" className="text-white hover:text-gray-300 px-3 py-2">Our Approach</a>
-              <a href="#contact" className="text-white hover:text-gray-300 px-3 py-2">Contact</a>
+              <a href="#home" className="text-white hover:text-blue-300 px-3 py-2 transition-colors">Home</a>
+              <a href="#services" className="text-white hover:text-blue-300 px-3 py-2 transition-colors">Services</a>
+              <a href="#approach" className="text-white hover:text-blue-300 px-3 py-2 transition-colors">Our Approach</a>
+              <a href="#contact" className="text-white hover:text-blue-300 px-3 py-2 transition-colors">Contact</a>
             </div>
           </div>
           
@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-gray-300"
+              className="text-white hover:text-blue-300"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -38,10 +38,10 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-navy-900">
-            <a href="#home" className="text-white block px-3 py-2">Home</a>
-            <a href="#services" className="text-white block px-3 py-2">Services</a>
-            <a href="#approach" className="text-white block px-3 py-2">Our Approach</a>
-            <a href="#contact" className="text-white block px-3 py-2">Contact</a>
+            <a href="#home" className="text-white hover:text-blue-300 block px-3 py-2 transition-colors">Home</a>
+            <a href="#services" className="text-white hover:text-blue-300 block px-3 py-2 transition-colors">Services</a>
+            <a href="#approach" className="text-white hover:text-blue-300 block px-3 py-2 transition-colors">Our Approach</a>
+            <a href="#contact" className="text-white hover:text-blue-300 block px-3 py-2 transition-colors">Contact</a>
           </div>
         </div>
       )}

@@ -1,3 +1,5 @@
+// src/components/OurApproach.jsx
+import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const OurApproach = () => {
@@ -25,13 +27,13 @@ const OurApproach = () => {
   ];
 
   return (
-    <div id="approach" className="py-24 bg-navy-900">
+    <div id="approach" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-navy-900 sm:text-4xl">
             Our Approach
           </h2>
-          <p className="mt-4 text-xl text-gray-300">
+          <p className="mt-4 text-xl text-navy-700">
             A systematic approach to delivering exceptional results
           </p>
         </div>
@@ -40,13 +42,13 @@ const OurApproach = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="flex items-center justify-center">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white">
-                    <CheckCircle className="w-6 h-6 text-navy-900" />
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500">
+                    <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="mt-4 text-center">
-                  <h3 className="text-lg font-medium text-white">{step.title}</h3>
-                  <p className="mt-2 text-sm text-gray-300">{step.description}</p>
+                  <h3 className="text-lg font-medium text-navy-900">{step.title}</h3>
+                  <p className="mt-2 text-sm text-navy-700">{step.description}</p>
                 </div>
               </div>
             ))}

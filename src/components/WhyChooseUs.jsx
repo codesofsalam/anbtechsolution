@@ -1,21 +1,16 @@
-import PropTypes from 'prop-types';
+// src/components/WhyChooseUs.jsx
+import React from 'react';
 import { Smartphone, Globe, TrendingUp, ShoppingCart, Pen, Box } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
-  <div className="p-6 border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-    <div className="inline-block p-3 bg-navy-900 rounded-lg">
+  <div className="p-6 bg-navy-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-700">
+    <div className="inline-block p-3 bg-blue-500 rounded-lg">
       <Icon className="h-6 w-6 text-white" />
     </div>
-    <h3 className="mt-4 text-xl font-semibold text-navy-900">{title}</h3>
-    <p className="mt-2 text-gray-600">{description}</p>
+    <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
+    <p className="mt-2 text-gray-300">{description}</p>
   </div>
 );
-
-ServiceCard.propTypes = {
-  icon: PropTypes.elementType.isRequired, // Ensures the `icon` is a valid React component
-  title: PropTypes.string.isRequired,    // Validates that `title` is a string and required
-  description: PropTypes.string.isRequired, // Validates that `description` is a string and required
-};
 
 const WhyChooseUs = () => {
   const services = [
@@ -52,13 +47,13 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div id="services" className="py-24 bg-white">
+    <div id="services" className="py-24 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-navy-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             Why Choose Us
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-gray-300">
             Comprehensive solutions to drive your business forward
           </p>
         </div>
