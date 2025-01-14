@@ -11,42 +11,41 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <img src="/Asset 11.png" className="h-16 w-auto mt-2" alt="Logo" />
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="#home"
-                className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#services"
-                className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="#projects"
-                className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
-              >
-                Our Projects
-              </a>{" "}
-              {/* Added Our Projects */}
-              <a
-                href="#approach"
-                className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
-              >
-                Our Approach
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
-              >
-                Contact
-              </a>
-            </div>
+          {/* Desktop View */}
+          <div className="hidden md:flex items-baseline space-x-4">
+            <a
+              href="#home"
+              className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#projects"
+              className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
+            >
+              Our Projects
+            </a>
+            <a
+              href="#approach"
+              className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
+            >
+              Our Approach
+            </a>
+            <a
+              href="#contact"
+              className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
+            >
+              Contact
+            </a>
           </div>
 
+          {/* Mobile View */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -58,9 +57,10 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-navy-900">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#home"
               className="text-white hover:text-blue-300 block px-3 py-2 transition-colors"
@@ -78,8 +78,7 @@ const Navbar = () => {
               className="text-white hover:text-blue-300 block px-3 py-2 transition-colors"
             >
               Our Projects
-            </a>{" "}
-            {/* Added Our Projects */}
+            </a>
             <a
               href="#approach"
               className="text-white hover:text-blue-300 block px-3 py-2 transition-colors"

@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="rounded-md shadow">
               <a
                 href="#contact"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#021228] bg-white hover:bg-blue-700 transition-colors md:py-3 md:text-lg md:px-8"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#021228] bg-white transition-colors md:py-3 md:text-lg md:px-8"
               >
                 Get Started
               </a>
