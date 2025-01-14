@@ -3,7 +3,7 @@ import { Smartphone, Globe, TrendingUp, ShoppingCart, Pen, Box } from 'lucide-re
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
   <div className="p-6 bg-navy-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-700">
-    <div className="inline-block p-3 bg-blue-500 rounded-lg">
+    <div className="inline-block p-3 bg-[#021228] rounded-lg">
       <Icon className="h-6 w-6 text-white" />
     </div>
     <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
@@ -22,37 +22,37 @@ const WhyChooseUs = () => {
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Custom mobile applications that deliver exceptional user experiences across all platforms."
+      description: "Our expert team ensures seamless user experiences with innovative features. From concept to launch, we prioritize performance and design. Stay ahead in a mobile-first world with our cutting-edge solutions."
     },
     {
       icon: Globe,
       title: "Website Development",
-      description: "Responsive and scalable websites that help your business establish a strong online presence."
+      description: "Create a stunning online presence with our custom website development services. User-friendly sites for all devices and platforms. Our focus on functionality and aesthetics that your brand stands out."
     },
     {
       icon: TrendingUp,
       title: "Digital Marketing",
-      description: "Strategic digital marketing solutions to boost your brand visibility and drive growth."
+      description: "We utilize SEO, social media, and content marketing to drive traffic and engagement. Our data-driven approach ensures measurable results and continuous improvement. Grow your brand online."
     },
     {
       icon: ShoppingCart,
       title: "E-commerce",
-      description: "End-to-end e-commerce solutions that help you sell products and services online effectively."
+      description: "From payment integration to inventory management, we handle it all. We design and develop secure, scalable platforms that enhance customer shopping experiences."
     },
     {
       icon: Pen,
       title: "UI/UX Design",
-      description: "User-centered design solutions that create engaging and intuitive digital experiences."
+      description: "Create intuitive and engaging user interfaces that captivate your audience. Ensuring your app works seamlessly across various devices and operating systems."
     },
     {
       icon: Box,
       title: "Application Solutions",
-      description: "Custom software solutions tailored to meet your specific business requirements."
+      description: "Providing ongoing support and updates to keep your app running smoothly. Tailored solutions to meet your specific business requirements. Earning the trust of our clients."
     }
   ];
 
   return (
-    <div id="services" className="py-24 bg-navy-900">
+    <div id="services" className="py-24 bg-[#021228]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">

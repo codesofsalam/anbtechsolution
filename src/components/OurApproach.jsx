@@ -28,11 +28,11 @@ const OurApproach = () => {
     <div id="approach" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-navy-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-[#021228] sm:text-4xl">
             Our Approach
           </h2>
           <p className="mt-4 text-xl text-navy-700">
-            A systematic approach to delivering exceptional results
+          We take a collaborative approach to app development. From the initial consultation to post-launch support, we work closely with you to understand your goals and target audience. Our agile development process allows for flexibility and adaptability, ensuring that your app evolves with your needs.
           </p>
         </div>
         <div className="mt-20">
@@ -40,12 +40,12 @@ const OurApproach = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="flex items-center justify-center">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#021228]">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="mt-4 text-center">
-                  <h3 className="text-lg font-medium text-navy-900">{step.title}</h3>
+                  <h3 className="text-lg font-medium text-[#021228]">{step.title}</h3>
                   <p className="mt-2 text-sm text-navy-700">{step.description}</p>
                 </div>
               </div>

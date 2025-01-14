@@ -4,6 +4,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import OurApproach from './components/OurApproach';
 import GetInTouch from './components/GetInTouch';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <WhyChooseUs />
+      <Projects />
       <OurApproach />
       <GetInTouch />
       <Footer />

@@ -2,14 +2,14 @@ import { Send } from 'lucide-react';
 
 const GetInTouch = () => {
   return (
-    <div id="contact" className="py-24 bg-navy-900">
+    <div id="contact" className="py-24 bg-[#021228]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             Get in Touch
           </h2>
           <p className="mt-4 text-xl text-gray-300">
-            Let&apos;s discuss how we can help transform your business
+            Let&apos;s discuss how we can help transform your business or idea
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto">
@@ -21,8 +21,9 @@ const GetInTouch = () => {
               <input
                 type="text"
                 id="name"
-                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900 
-                focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
+                 focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
+                placeholder='Enter Your Name'
               />
             </div>
             <div>
@@ -32,8 +33,9 @@ const GetInTouch = () => {
               <input
                 type="email"
                 id="email"
-                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900 
-                focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
+                 focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
+                placeholder='Enter Your Email'
               />
             </div>
             <div>
@@ -43,18 +45,19 @@ const GetInTouch = () => {
               <textarea
                 id="message"
                 rows="4"
-                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900 
-                focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
+                 focus:border-blue-500 focus:ring-blue-500 px-4 py-3"
+                placeholder="Enter Your Message"
               ></textarea>
             </div>
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-white 
-                bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-navy-900 focus:ring-blue-500
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-[#021228]
+                 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-navy-900 focus:ring-blue-500
                 transition-colors"
               >
-                <Send className="w-5 h-5 mr-2" />
+                <Send className="w-5 h-5 mr-2 mt-1" />
                 Send Message
               </button>
             </div>
