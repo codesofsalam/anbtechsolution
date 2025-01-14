@@ -9,36 +9,29 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern Website Design",
-      description: "A responsive website built with React and Tailwind CSS",
-      thumbnail: "/api/placeholder/600/400",
+      title: "C&S Limousine Service",
+      thumbnail: "/limousine.PNG",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/limousine-full.png",
+        "/limousine-full2.png",
+        "/limousine-full3.png"
       ]
     },
     {
       id: 2,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration",
-      thumbnail: "/api/placeholder/600/400",
+      title: "OIB-Online Islamic Book App",
+      thumbnail: "oib.PNG",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/oib2.jpg",
+        "/oib3.jpg",
+        "/oib4.jpg"
       ]
     },
     {
       id: 3,
-      title: "Mobile App Development",
-      description: "Cross-platform mobile application built with React Native",
-      thumbnail: "/api/placeholder/600/400",
-      images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
-      ]
+      title: "Salah Tracker",
+      thumbnail: "/salahtracker.PNG",
+      video: "/salahtracker.mp4",
     }
   ];
 
@@ -59,9 +52,9 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white" id='projects'>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Projects</h2>
+        <h2 className="text-4xl text-[#021228] font-bold text-center mb-12">Our Projects</h2>
         
         {/* Projects Carousel */}
         <div className="relative">
@@ -77,9 +70,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div
                   key={project.id}
-                  className={`transform transition-all duration-300 ${
-                    index === currentProject ? 'scale-100 opacity-100' : 'scale-95 opacity-50'
-                  }`}
+                  className={`transform transition-all duration-300 ${index === currentProject ? 'scale-100 opacity-100' : 'scale-95 opacity-50'}`}
                   style={{
                     transform: `translateX(-${currentProject * 100}%)`,
                     flex: '0 0 100%'
@@ -95,7 +86,7 @@ const Projects = () => {
                     <img 
                       src={project.thumbnail} 
                       alt={project.title}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-96 object-cover"
                     />
                     <div className="p-6">
                       <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
@@ -119,43 +110,49 @@ const Projects = () => {
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
             <div className="relative w-full max-w-4xl mx-4">
+              {/* Close Button */}
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute right-4 top-4 z-10 p-2 bg-white rounded-full"
+                className="absolute right-6 top-6 z-50 p-3 bg-white rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 text-black" />
               </button>
               
-              <div className="bg-white rounded-lg overflow-hidden">
-                <div className="relative">
-                  <img 
-                    src={projects[currentProject].images[currentImage]}
-                    alt={`${projects[currentProject].title} - Image ${currentImage + 1}`}
-                    className="w-full h-96 object-cover"
-                  />
+              <div className="bg-white rounded-lg overflow-hidden relative">
+                <div className="relative overflow-auto max-h-screen">
+                  {/* Image or Video */}
+                  {projects[currentProject].video ? (
+                    <div className="relative w-full max-w-4xl mx-auto">
+                      <video 
+                        src={projects[currentProject].video}
+                        controls
+                        className="w-full max-h-screen mx-auto"
+                        autoPlay // You can remove this if you don't want it to autoplay
+                      />
+                    </div>
+                  ) : (
+                    <img 
+                      src={projects[currentProject].images[currentImage]}
+                      alt={`${projects[currentProject].title} - Image ${currentImage + 1}`}
+                      className="w-auto h-auto mx-auto"
+                    />
+                  )}
                   
+                  {/* Previous Image Button */}
                   <button 
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-lg"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   
+                  {/* Next Image Button */}
                   <button 
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white rounded-full shadow-lg"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2">
-                    {projects[currentProject].title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {projects[currentProject].description}
-                  </p>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -32,6 +32,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#projects"
+                  className="text-gray-300 hover:text-blue-300 transition-colors"
+                >
+                  Our Projects
+                </a>
+              </li>
+              <li>
+                <a
                   href="#approach"
                   className="text-gray-300 hover:text-blue-300 transition-colors"
                 >
@@ -54,25 +62,19 @@ const Footer = () => {
             </h3>
             <div className="mt-4 flex space-x-4">
               <a
-                href="#"
-                className="text-gray-300 hover:text-blue-300 transition-colors"
-              >
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-blue-300 transition-colors"
-              >
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/anb-tech-solutions/"
                 className="text-gray-300 hover:text-blue-300 transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/18GBjciTFb/"
+                className="text-gray-300 hover:text-blue-300 transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/anb.techsolutions?utm_source=qr&igsh=dGJ4eTFtZmFsbHFk"
                 className="text-gray-300 hover:text-blue-300 transition-colors"
               >
                 <Instagram className="h-6 w-6" />

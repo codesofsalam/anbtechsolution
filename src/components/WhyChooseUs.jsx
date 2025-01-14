@@ -12,9 +12,9 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
 );
 
 ServiceCard.propTypes = {
-  icon: PropTypes.elementType.isRequired, // Ensures the icon prop is a valid React component
-  title: PropTypes.string.isRequired,    // Ensures title is a required string
-  description: PropTypes.string.isRequired, // Ensures description is a required string
+  icon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,  
+  description: PropTypes.string.isRequired, 
 };
 
 const WhyChooseUs = () => {
