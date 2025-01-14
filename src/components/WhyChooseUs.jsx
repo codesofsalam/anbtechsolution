@@ -1,5 +1,12 @@
-import PropTypes from 'prop-types';
-import { Smartphone, Globe, TrendingUp, ShoppingCart, Pen, Box } from 'lucide-react';
+import PropTypes from "prop-types";
+import {
+  Smartphone,
+  Globe,
+  TrendingUp,
+  ShoppingCart,
+  Pen,
+  Box,
+} from "lucide-react";
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
   <div className="p-6 bg-navy-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-700">
@@ -13,8 +20,8 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
 
 ServiceCard.propTypes = {
   icon: PropTypes.elementType.isRequired,
-  title: PropTypes.string.isRequired,  
-  description: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 const WhyChooseUs = () => {
@@ -22,33 +29,39 @@ const WhyChooseUs = () => {
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Our expert team ensures seamless user experiences with innovative features. From concept to launch, we prioritize performance and design. Stay ahead in a mobile-first world with our cutting-edge solutions."
+      description:
+        "Our expert team ensures seamless user experiences with innovative features. From concept to launch, we prioritize performance and design. Stay ahead in a mobile-first world with our cutting-edge solutions.",
     },
     {
       icon: Globe,
       title: "Website Development",
-      description: "Create a stunning online presence with our custom website development services. User-friendly sites for all devices and platforms. Our focus on functionality and aesthetics that your brand stands out."
+      description:
+        "Create a stunning online presence with our custom website development services. User-friendly sites for all devices and platforms. Our focus on functionality and aesthetics that your brand stands out.",
     },
     {
       icon: TrendingUp,
       title: "Digital Marketing",
-      description: "We utilize SEO, social media, and content marketing to drive traffic and engagement. Our data-driven approach ensures measurable results and continuous improvement. Grow your brand online."
+      description:
+        "We utilize SEO, social media, and content marketing to drive traffic and engagement. Our data-driven approach ensures measurable results and continuous improvement. Grow your brand online.",
     },
     {
       icon: ShoppingCart,
       title: "E-commerce",
-      description: "From payment integration to inventory management, we handle it all. We design and develop secure, scalable platforms that enhance customer shopping experiences."
+      description:
+        "From payment integration to inventory management, we handle it all. We design and develop secure, scalable platforms that enhance customer shopping experiences.",
     },
     {
       icon: Pen,
       title: "UI/UX Design",
-      description: "Create intuitive and engaging user interfaces that captivate your audience. Ensuring your app works seamlessly across various devices and operating systems."
+      description:
+        "Create intuitive and engaging user interfaces that captivate your audience. Ensuring your app works seamlessly across various devices and operating systems.",
     },
     {
       icon: Box,
       title: "Application Solutions",
-      description: "Providing ongoing support and updates to keep your app running smoothly. Tailored solutions to meet your specific business requirements. Earning the trust of our clients."
-    }
+      description:
+        "Providing ongoing support and updates to keep your app running smoothly. Tailored solutions to meet your specific business requirements. Earning the trust of our clients.",
+    },
   ];
 
   return (

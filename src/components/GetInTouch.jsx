@@ -1,12 +1,12 @@
-import { Send } from 'lucide-react';
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { Send } from "lucide-react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -19,14 +19,14 @@ const GetInTouch = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = 'service_ccm7sfw';
-    const templateId = 'template_m7rwozo';
-    const publicKey = '8fhpfjLJAZs8-jOQw';
+    const serviceId = "service_ccm7sfw";
+    const templateId = "template_m7rwozo";
+    const publicKey = "8fhpfjLJAZs8-jOQw";
 
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
-      to_name: 'Abdul Salam',
+      to_name: "Abdul Salam",
       message: formData.message,
     };
 
@@ -34,13 +34,13 @@ const GetInTouch = () => {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         alert(
-          'Message sent successfully! Abdul Salam will get back to you soon.',
+          "Message sent successfully! Abdul Salam will get back to you soon.",
           response
         );
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
-        console.error('Error sending email', error);
+        console.error("Error sending email", error);
       });
   };
 
