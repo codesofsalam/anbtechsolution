@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Projects = () => {
@@ -26,18 +26,23 @@ const Projects = () => {
     {
       id: 3,
       title: "Salah Tracker",
-      thumbnail: "/salahtracker.PNG",
+      thumbnail: "/salahtracker.png",
       video: "/salahtracker.mp4",
+      images: [
+        "/salahtracker2.jpg",
+        "/salahtracker3.jpg",
+        "/salahtracker4.jpg",
+      ],
     },
   ];
 
-  const nextProject = () => {
+  const nextProject = useCallback(() => {
     setCurrentProject((prev) => (prev + 1) % projects.length);
-  };
+  }, [projects.length]);
 
-  const prevProject = () => {
+  const prevProject = useCallback(() => {
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
-  };
+  }, [projects.length]);
 
   const nextImage = () => {
     setCurrentImage(
@@ -106,9 +111,6 @@ const Projects = () => {
                       <h3 className="text-xl md:text-2xl font-semibold mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-gray-600 text-sm md:text-base">
-                        {project.description}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -135,39 +137,41 @@ const Projects = () => {
               </button>
 
               <div className="bg-white rounded-lg overflow-hidden relative">
-                <div className="relative overflow-auto max-h-[80vh] md:max-h-screen">
-                  {projects[currentProject].video ? (
-                    <div className="relative w-full max-w-4xl mx-auto">
+                <div className="relative overflow-auto max-h-[80vh] md:max-h-screen flex flex-col items-center">
+                  {projects[currentProject].video && (
+                    <div className="relative w-full max-w-4xl mx-auto mb-4">
                       <video
                         src={projects[currentProject].video}
                         controls
-                        className="w-full h-auto max-h-[80vh] md:max-h-screen mx-auto"
+                        className="w-full h-auto max-h-[40vh] md:max-h-[50vh] mx-auto"
                         autoPlay
                       />
                     </div>
-                  ) : (
+                  )}
+
+                  <div className="relative w-full max-w-4xl mx-auto">
                     <img
                       src={projects[currentProject].images[currentImage]}
                       alt={`${projects[currentProject].title} - Image ${
                         currentImage + 1
                       }`}
-                      className="w-full h-auto max-h-[80vh] md:max-h-screen object-contain mx-auto"
+                      className="w-full h-auto max-h-[40vh] md:max-h-[50vh] object-contain mx-auto"
                     />
-                  )}
 
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 p-2 md:p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
-                  >
-                    <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
-                  </button>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 p-2 md:p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
+                    >
+                      <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
+                    </button>
 
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 p-2 md:p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
-                  >
-                    <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
-                  </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 p-2 md:p-3 bg-white rounded-full shadow-lg hover:bg-gray-200"
+                    >
+                      <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
