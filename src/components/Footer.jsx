@@ -16,11 +16,11 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-center md:-ml-52">
             <h3 className="text-white text-base md:text-lg font-semibold">
               Quick Links
             </h3>
-            <ul className="mt-3 md:mt-4 space-y-2">
+            <ul className="mt-3 md:mt-4 space-y-2 md:space-y-3">
               <li>
                 <a
                   href="#home"

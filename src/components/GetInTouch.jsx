@@ -1,6 +1,7 @@
 import { Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
@@ -19,27 +20,65 @@ const GetInTouch = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      Swal.fire({
+        icon: "warning",
+        title: "All fields are required!",
+        text: "Please fill in all the fields before submitting.",
+        confirmButtonColor: "#021228",
+        background: "#f9f9f9",
+        customClass: {
+          popup: "rounded-lg shadow-lg",
+          title: "text-navy-900 font-bold",
+          content: "text-navy-700",
+        },
+      });
+      return;
+    }
+
     const serviceId = "service_6snmdtn";
     const templateId = "template_myizwol";
     const publicKey = "YgvHE4u2Jngk8ehbK";
 
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
+      from_name: name,
+      from_email: email,
       to_name: "ANB Tech Solution",
-      message: formData.message,
+      message,
     };
 
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        alert(
-          "Message sent successfully! We will get back to you soon.",
-          response
-        );
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Your message has been sent successfully. We will get back to you soon!",
+          confirmButtonColor: "#021228",
+          background: "#f9f9f9",
+          customClass: {
+            popup: "rounded-lg shadow-lg",
+            title: "text-navy-900 font-bold",
+            content: "text-navy-700",
+          },
+        });
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: "There was an error sending your message. Please try again later.",
+          confirmButtonColor: "#021228",
+          background: "#f9f9f9",
+          customClass: {
+            popup: "rounded-lg shadow-lg",
+            title: "text-navy-900 font-bold",
+            content: "text-navy-700",
+          },
+        });
         console.error("Error sending email", error);
       });
   };
@@ -72,6 +111,7 @@ const GetInTouch = () => {
                 className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
                  focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
                 placeholder="Enter Your Name"
+                required
               />
             </div>
             <div>
@@ -89,6 +129,7 @@ const GetInTouch = () => {
                 className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
                  focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
                 placeholder="Enter Your Email"
+                required
               />
             </div>
             <div>
@@ -106,6 +147,7 @@ const GetInTouch = () => {
                 className="mt-1 block w-full rounded-md bg-white border-gray-300 text-navy-900
                  focus:border-blue-500 focus:ring-blue-500 px-4 py-3"
                 placeholder="Enter Your Message"
+                required
               ></textarea>
             </div>
             <div>
