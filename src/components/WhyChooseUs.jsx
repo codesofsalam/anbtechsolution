@@ -11,7 +11,7 @@ import {
 const ServiceCard = ({ icon: Icon, title, description, backgroundImage }) => (
   <div className="relative p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-700 overflow-hidden">
     <div
-      className="absolute inset-0 bg-cover bg-center opacity-40"
+      className="absolute inset-0 bg-cover bg-center opacity-20"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     ></div>
     <div className="relative z-10">

@@ -1,10 +1,19 @@
 const Hero = () => {
   return (
-    <div id="home" className="pt-16 bg-[#021228]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <div
+      id="home"
+      className="relative pt-16 bg-[#021228] bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/bg.PNG')",
+      }}
+    >
+      {/* Overlay for Opacity */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
           <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-5xl md:text-5xl font-cardo">
-          <span className="block">Your Partner for Trusted Solutions</span>
+            <span className="block">Your Partner for Trusted Solutions</span>
             <span className="block text-white">in the Digital Age</span>
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
