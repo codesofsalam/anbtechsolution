@@ -26,7 +26,7 @@ const Projects = () => {
     {
       id: 3,
       title: "Salah Tracker",
-      thumbnail: "/salahtracker.png",
+      thumbnail: "/salahtrackerthumbnail.jpg",
       video: "/salahtracker.mp4",
       images: [
         "/salahtracker2.jpg",
@@ -60,7 +60,7 @@ const Projects = () => {
 
   useEffect(() => {
     if (!isModalOpen) {
-      const interval = setInterval(nextProject, 3000);
+      const interval = setInterval(nextProject, 5000);
       return () => clearInterval(interval);
     }
   }, [isModalOpen, currentProject, nextProject]);
