@@ -8,7 +8,11 @@ export default {
         800: '#153e75',
         900: '#1e3a8a',
       },
-    },},
+    },
+    fontFamily: {
+      cardo: ['Cardo', 'serif'],
+    },
+  },
   },
   plugins: [],
 };

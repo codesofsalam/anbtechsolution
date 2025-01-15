@@ -9,9 +9,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <img src="/Asset 11.png" className="h-16 w-auto mt-2" alt="Logo" />
+            <img src="/logo.png" className="h-8 w-auto mt-2" alt="Logo" />
           </div>
-          {/* Desktop View */}
           <div className="hidden md:flex items-baseline space-x-4">
             <a
               href="#home"
@@ -29,13 +28,13 @@ const Navbar = () => {
               href="#projects"
               className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
             >
-              Our Projects
+              Projects
             </a>
             <a
               href="#approach"
               className="text-white hover:text-blue-300 px-3 py-2 transition-colors"
             >
-              Our Approach
+              Approach
             </a>
             <a
               href="#contact"
@@ -45,7 +44,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile View */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -57,7 +55,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -77,13 +74,13 @@ const Navbar = () => {
               href="#projects"
               className="text-white hover:text-blue-300 block px-3 py-2 transition-colors"
             >
-              Our Projects
+              Projects
             </a>
             <a
               href="#approach"
               className="text-white hover:text-blue-300 block px-3 py-2 transition-colors"
             >
-              Our Approach
+              Approach
             </a>
             <a
               href="#contact"

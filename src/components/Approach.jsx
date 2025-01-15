@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
 
-const OurApproach = () => {
+const Approach = () => {
   const steps = [
     {
       title: "Discovery",
@@ -33,8 +33,8 @@ const OurApproach = () => {
     <div id="approach" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-[#021228] sm:text-4xl">
-            Our Approach
+          <h2 className="text-3xl font-extrabold text-[#021228] sm:text-4xl font-cardo">
+            Approach
           </h2>
           <p className="mt-4 text-xl text-navy-700">
             We take a collaborative approach to app development. From the
@@ -70,4 +70,4 @@ const OurApproach = () => {
   );
 };
 
-export default OurApproach;
+export default Approach;

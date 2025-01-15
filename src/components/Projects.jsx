@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Projects = () => {
@@ -53,11 +53,18 @@ const Projects = () => {
     );
   };
 
+  useEffect(() => {
+    if (!isModalOpen) {
+      const interval = setInterval(nextProject, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [isModalOpen, currentProject, nextProject]);
+
   return (
     <section className="py-8 md:py-16 bg-white" id="projects">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl text-[#021228] font-bold text-center mb-8 md:mb-12">
-          Our Projects
+        <h2 className="text-3xl md:text-4xl text-[#021228] font-bold text-center mb-8 md:mb-12 font-cardo">
+          Projects
         </h2>
 
         <div className="relative">

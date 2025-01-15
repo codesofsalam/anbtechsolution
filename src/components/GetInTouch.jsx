@@ -19,14 +19,14 @@ const GetInTouch = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_ccm7sfw";
-    const templateId = "template_m7rwozo";
-    const publicKey = "8fhpfjLJAZs8-jOQw";
+    const serviceId = "service_6snmdtn";
+    const templateId = "template_myizwol";
+    const publicKey = "YgvHE4u2Jngk8ehbK";
 
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
-      to_name: "Abdul Salam",
+      to_name: "ANB Tech Solution",
       message: formData.message,
     };
 
@@ -34,7 +34,7 @@ const GetInTouch = () => {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         alert(
-          "Message sent successfully! Abdul Salam will get back to you soon.",
+          "Message sent successfully! We will get back to you soon.",
           response
         );
         setFormData({ name: "", email: "", message: "" });
@@ -48,7 +48,7 @@ const GetInTouch = () => {
     <div id="contact" className="py-24 bg-[#021228]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl font-cardo">
             Get in Touch
           </h2>
           <p className="mt-4 text-xl text-gray-300">
