@@ -6,7 +6,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           <div className="col-span-1 md:col-span-2 text-center md:text-left">
-            <img src="logo.png" className="h-8 w-auto mt-2" alt="" />
+            <img
+              src="logo.png"
+              className="h-8 w-auto mt-2 mx-auto md:mx-0"
+              alt=""
+            />
             <p className="mt-3 md:mt-4 text-gray-300 text-sm md:text-base">
               Your Partner for Trusted Solutions in the Digital Age
             </p>
