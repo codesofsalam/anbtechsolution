@@ -20,7 +20,7 @@ const Projects = () => {
     {
       id: 2,
       title: "OIB-Online Islamic Book App",
-      thumbnail: "oib.PNG",
+      thumbnail: "/oib.PNG",
       images: ["/oib2.jpg", "/oib3.jpg", "/oib4.jpg"],
     },
     {
