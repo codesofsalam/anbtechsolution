@@ -112,7 +112,7 @@ const GetInTouch = () => {
               <button
                 type="submit"
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-[#021228]
-                 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-navy-900 focus:ring-blue-500
+                 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#021228]
                 transition-colors"
               >
                 <Send className="w-5 h-5 mr-2 mt-1" />
